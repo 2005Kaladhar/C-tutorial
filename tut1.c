@@ -1,47 +1,53 @@
-// Basic Structure of a C program
+//Parts of a C program
 /*
-
-1. Pre processor command
-2. Functions
+Following are the parts of a C program :
+1. Pre-processing command
+2. Function
 3. Variables
-4. Statement and expressions
+4. Statement and Expression
 5. Comments
 
+## Difference between statement and expression
+Expression is something that produces a value
+and satement is a piece of code that does a specific function
+
+example :
+1. iq = 233
+2. age = iq/20
+
+iq/20 - THis produces a value and therefore is an expression
+and complete line 2 is a statement that assigns a value to the variable age
+and similarly line 1 is also a statement that assigns a value to the variable iq
+
+-------------------------------------------------------------------------------------------------
+These are the tokens in C language
+"Tokens" are the building block of a program
+There are 5 tokens :
+1.keywords
+2.identifier 
+3.string literal
+4.constant
+5.symbol 
+
+-------------------------------------------------------------------------------------------------
+
+## Datatypes in C 
+There are 4 major datatypes
+1. Basic datatypes - int, char, float, long, double etc.
+2. Derived datatyeps - arrayas, pointer, structure, union 
+3. Enumeration datatype - enum
+4. Void datatype - void
 
 */
 
-// This is a preprocessor command this includes the file stdio.h to use in our program
 #include<stdio.h>
 
-// This is a special function from where our program starts
-// int is the value that the function is going to return
-//The returned function value goes to the operating system
-int main(){
-    int a ;
-    printf("This is a line .....\n");
-    scanf("%d", &a);
-    // Return 0 means that the program has run successfully
-    return 'c';
-
+int main()
+{
+    int a;
+    a = 100;
+    printf("hello world this is kaladhar gopal and I am a good boy \n");
+    printf("Printing size of variable 'a' = %d",sizeof(a));
+    return 0;
+    
 }
-
-/*
-Behind the scene
-1. Pre-processing
-2. Compilation
-3. Assembly
-4. Linking
-
-Pre-processing - In this process all the content of the header file are copied, comments are removed and macros are expanded and the file is saved with .i extension
-
-Compilation - In this the program is converted to assembly language and saved with .s extension
-
-Assembly - In this process the assembly language is converted to machine level instruction this is a binary file saved with .o extension
-
-Linkning - In this step all the binary files (.o files) are linked to create a single executable file
-There are two types of linking -
- Dynamic linking(.dll files ) 
- Static Linking
-
-
-*/
